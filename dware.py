@@ -12,11 +12,9 @@ def get_key():
 	return ''.join([str(r.randint(1,6)) for i in range(5)])
 
 def get_password():
-	#key = get_key()
-	#print(words[get_key()])
-	return ''.join([words[get_key()] for i in range(5)])
+	num_of_words = 5
+	return ''.join([words[get_key()] for i in range(num_of_words)])
 
 if __name__ == '__main__':
-	#get_word()
 	print(get_password())
 	
