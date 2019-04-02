@@ -1,6 +1,5 @@
 TODO:
 
-1. Add a more "random" way of getting values (OS module perhaps)
-2. Add the ability to capitalize, add numbers, add special characters (E.g. @)
-3. Make a GUI (desktop version I guess)
-4. Make it into a webapp
+1. Add the ability to capitalize, add numbers, add special characters (E.g. @)
+2. Make a GUI (desktop version I guess)
+3. Make it into a webapp
