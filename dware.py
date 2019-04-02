@@ -11,8 +11,7 @@ def get_key():
 	'''
 	return ''.join([str(SystemRandom().randrange(6)+1) for i in range(5)])
 
-def get_password():
-	num_of_words = 5
+def get_password(num_of_words = 5):
 	return ''.join([words[get_key()] for i in range(num_of_words)])
 
 if __name__ == '__main__':
