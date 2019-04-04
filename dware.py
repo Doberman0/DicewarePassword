@@ -25,6 +25,16 @@ def get_options():
 
 	return num, special_char
 
+def edit_pwd(edit, pwd):
+	#Choose how many special characters to add (1-3)
+	num_of_nums = SystemRandom().randrange(3)+1
+	#Add random nums in random positions
+	for i in range(num_of_nums):
+		pos = SystemRandom().randrange(len(pwd))
+		pwd = pwd[:pos] + edit + pwd[pos:]
+	return pwd
+
+
 if __name__ == '__main__':
 	pwd = get_password()
 	
@@ -35,23 +45,11 @@ if __name__ == '__main__':
 
 	#Add random numbers
 	if n == 'y':
-		#Choose how many numbers to add
-		num_of_nums = SystemRandom().randrange(3)+1
-		#Add random nums in random positions
-		for i in range(num_of_nums):
-			pos = SystemRandom().randrange(len(pwd))
-			rand_num = str(SystemRandom().randrange(10))
-			pwd = pwd[:pos] + rand_num + pwd[pos:]
+		pwd = edit_pwd(str(SystemRandom().randrange(10)), pwd)
 
 	#Add random characters
 	if s_c == 'y':
-		#Choose how many special characters to add (1-3)
-		num_of_nums = SystemRandom().randrange(3)+1
-		#Add random nums in random positions
-		for i in range(num_of_nums):
-			pos = SystemRandom().randrange(len(pwd))
-			rand_char = chr(SystemRandom().randrange(11) + 35)
-			pwd = pwd[:pos] + rand_char + pwd[pos:]
+		pwd = edit_pwd(chr(SystemRandom().randrange(11) + 35), pwd)
 
 	print(pwd)
 	
