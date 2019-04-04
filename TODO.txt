@@ -1,5 +1,5 @@
 TODO:
 
-1. Add the ability to capitalize, add numbers, add special characters (E.g. @)
-2. Make a GUI (desktop version I guess)
-3. Make it into a webapp
+1. Create a mnemonic system to help users remember their passwords
+2. Make it into a webapp (using flask)
+
