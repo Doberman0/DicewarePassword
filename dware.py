@@ -36,9 +36,12 @@ def edit_pwd(edit, pwd):
 
 
 if __name__ == '__main__':
-	pwd = get_password()
+	num_of_words = int(input('How many words do you want your password to compose of? '))
+
+	pwd = get_password(num_of_words)
 	
 	n, s_c = get_options()
+
 	#Print the vanilla/base password first since that's easier to remember
 	if n == 'y' or s_c == 'y':
 		print('The base password is: ' + pwd)
